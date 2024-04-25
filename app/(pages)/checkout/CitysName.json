@@ -1,0 +1,298 @@
+{
+    "city":[
+            {
+                "id":"1",
+                "name":"01: Adrar",
+                "value":"Adrar"
+            },
+            {
+                "id":"2",
+                "name":"02: Chlef",
+                "value":"Chlef"
+            },
+            {
+                "id":"3",
+                "name":"03: Laghouat",
+                "value":"Laghouat"
+            },
+            {
+                "id":"4",
+                "name":"04: Oum El Bouaghi",
+                "value":"Oum El Bouaghi"
+            },
+            {
+                "id":"5",
+                "name":"05: Batna",
+                "value":"Batna"
+            },
+            {
+                "id":"6",
+                "name":"06: Bejaia",
+                "value":"Bejaia"
+            },
+            {
+                "id":"7",
+                "name":"07: Biskra",
+                "value":"Biskra"
+            },
+            {
+                "id":"8",
+                "name":"08: Béchar",
+                "value":"Béchar"
+            },
+            {
+                "id":"9",
+                "name":"09: Blida",
+                "value":"Blida"
+            },
+            {
+                "id":"10",
+                "name":"10: Bouïra",
+                "value":"Bouïra"
+            },
+            {
+                "id":"11",
+                "name":"11: Tamanrasset",
+                "value":"Tamanrasset"
+            },
+            {
+                "id":"12",
+                "name":"12: Tebessa",
+                "value":"Tebessa"
+            },
+            {
+                "id":"13",
+                "name":"13: Tlemcen",
+                "value":"Tlemcen"
+            },
+            {
+                "id":"14",
+                "name":"14: Tiaret",
+                "value":"Tiaret"
+            },
+            {
+                "id":"15",
+                "name":"15: Tizi Ouzou",
+                "value":"Tizi Ouzou"
+            },
+            {
+                "id":"16",
+                "name":"16: Alger",
+                "value":"Alger"
+            },
+            {
+                "id":"17",
+                "name":"17: Djelfa",
+                "value":"Djelfa"
+            }
+
+
+
+            ,
+            {
+                "id":"18",
+                "name":"18: Jijel",
+                "value":"Jijel"
+            },
+            {
+                "id":"19",
+                "name":"19: Setif",
+                "value":"Setif"
+            },
+            {
+                "id":"20",
+                "name":"20: Saida",
+                "value":"Saida"
+            },
+            {
+                "id":"21",
+                "name":"21: Skikda",
+                "value":"Skikda"
+            },
+            {
+                "id":"22",
+                "name":"22: Sidi Bel Abbes",
+                "value":"Sidi Bel Abbes"
+            },
+            {
+                "id":"23",
+                "name":"23: Annaba",
+                "value":"Annaba"
+            },
+            {
+                "id":"24",
+                "name":"24: Guelma",
+                "value":"Guelma"
+            },
+            {
+                "id":"25",
+                "name":"25: Constantine",
+                "value":"Constantine"
+            },
+            {
+                "id":"26",
+                "name":"26: Medea",
+                "value":"Medea"
+            },
+            {
+                "id":"27",
+                "name":"27: Mostaganem",
+                "value":"Mostaganem"
+            },
+            {
+                "id":"28",
+                "name":"28: M'sila",
+                "value":"M'sila"
+            },
+            {
+                "id":"29",
+                "name":"29: Mascara",
+                "value":"Mascara"
+            },
+            {
+                "id":"30",
+                "name":"30: Ouargla",
+                "value":"Ouargla"
+            },
+            {
+                "id":"31",
+                "name":"31: Oran",
+                "value":"Oran"
+            },
+            {
+                "id":"32",
+                "name":"32: El Bayadh",
+                "value":"El Bayadh"
+            },
+            {
+                "id":"33",
+                "name":"33: Illizi",
+                "value":"Illizi"
+            },
+            {
+                "id":"34",
+                "name":"34: Bordj Bou Arreridj",
+                "value":"Bordj Bou Arreridj"
+            },
+            {
+                "id":"35",
+                "name":"35: Boumerdes",
+                "value":"Boumerdes"
+            },
+            {
+                "id":"36",
+                "name":"36: El Tarf",
+                "value":"El Tarf"
+            },
+            {
+                "id":"37",
+                "name":"37: Tindouf",
+                "value":"Tindouf"
+            },
+            {
+                "id":"38",
+                "name":"38: Tsimsilt",
+                "value":"Tsimsilt"
+            },
+            {
+                "id":"39",
+                "name":"39: El Oued",
+                "value":"El Oued"
+            },
+            {
+                "id":"40",
+                "name":"40: Khenchela",
+                "value":"Khenchela"
+            },
+            {
+                "id":"41",
+                "name":"41: Souk Ahras",
+                "value":"Souk Ahras"
+            },
+            {
+                "id":"42",
+                "name":"42: Tipaza",
+                "value":"Tipaza"
+            },
+            {
+                "id":"43",
+                "name":"43: Mila",
+                "value":"Mila"
+            },
+            {
+                "id":"44",
+                "name":"44: Ain Defla",
+                "value":"Ain Defla"
+            },
+            {
+                "id":"45",
+                "name":"45: Naâma",
+                "value":"Naâma"
+            },
+            {
+                "id":"46",
+                "name":"46: Ain Temouchent",
+                "value":"Ain Temouchent"
+            },
+            {
+                "id":"47",
+                "name":"47: Ghardaïa",
+                "value":"Ghardaïa"
+            },
+            {
+                "id":"48",
+                "name":"48: Relizane",
+                "value":"Relizane"
+            },
+            {
+                "id":"49",
+                "name":"49: Timimoun",
+                "value":"Timimoun"
+            },
+            {
+                "id":"50",
+                "name":"50: Bordj Badji Mokhtar",
+                "value":"Bordj Badji Mokhtar"
+            },
+            {
+                "id":"51",
+                "name":"51: Ouled Djellal",
+                "value":"Ouled Djellal"
+            },
+            {
+                "id":"52",
+                "name":"52: Béni Abbès",
+                "value":"52: Béni Abbès"
+            },
+            {
+                "id":"53",
+                "name":"53: Aïn Salah",
+                "value":"Aïn Salah"
+            },
+            {
+                "id":"54",
+                "name":"54: Ain Guezzam",
+                "value":"Ain Guezzam"
+            },
+            {
+                "id":"55",
+                "name":"55: Touggourt",
+                "value":"Touggourt"
+            },
+            {
+                "id":"56",
+                "name":"56: Djanet",
+                "value":"Djanet"
+            },
+            {
+                "id":"57",
+                "name":"57: El M'Ghair",
+                "value":"El M'Ghair"
+            },
+            {
+                "id":"58",
+                "name":"58: El Menia",
+                "value":"El Menia"
+            }
+        ]
+}
