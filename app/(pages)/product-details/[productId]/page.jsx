@@ -1,5 +1,5 @@
-import ProductBanner from "@/components/global/product/ProductBanner";
-import ProductInfo from "@/components/global/product/ProductInfo";
+import ProductBanner from "@/components/Global/product/ProductBanner";
+import ProductInfo from "@/components/Global/product/ProductInfo";
 import { getProductByIds, getProductCategory } from "@/lib/api/ServerAction";
 
 const productDetails = async ({ params }) => {

@@ -27,7 +27,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { restCart } from "@/redux/slices/cartSlice";
-import EmptyCart from "@/components/global/Cart/EmptyCart";
+import EmptyCart from "@/components/Global/Cart/EmptyCart";
 
 const citys = city;
 const cityArr = new Array();

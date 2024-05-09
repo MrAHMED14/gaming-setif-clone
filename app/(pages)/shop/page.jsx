@@ -1,5 +1,5 @@
-import ProductCard from "@/components/global/product/ProductCard";
-import ProductSkeleton from "@/components/global/product/ProductSkeleton";
+import ProductCard from "@/components/Global/product/ProductCard";
+import ProductSkeleton from "@/components/Global/product/ProductSkeleton";
 import { getLatestProduct } from "@/lib/api/ServerAction";
 
 export const dynamic = "force-dynamic";

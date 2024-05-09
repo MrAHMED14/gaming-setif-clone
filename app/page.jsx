@@ -1,6 +1,6 @@
-import Slider from "@/components/global/Slider";
-import ProductCard from "@/components/global/product/ProductCard";
-import ProductSkeleton from "@/components/global/product/ProductSkeleton";
+import Slider from "@/components/Global/Slider";
+import ProductCard from "@/components/Global/product/ProductCard";
+import ProductSkeleton from "@/components/Global/product/ProductSkeleton";
 import { getPopularProducts, getProduct2 } from "@/lib/api/ServerAction";
 import Link from "next/link";
 
