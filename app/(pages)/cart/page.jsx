@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import CartItem from "@/components/global/Cart/CartItem";
 import { restCart } from "@/redux/slices/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
+import CartItem from "@/components/global/Cart/CartItem";
 import EmptyCart from "@/components/global/Cart/EmptyCart";
 
 const CartPage = () => {
