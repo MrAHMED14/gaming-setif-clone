@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { restCart } from "@/redux/slices/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
-import CartItem from "@/components/global/Cart/CartItem";
-import EmptyCart from "@/components/global/Cart/EmptyCart";
+import CartItem from "../../../components/global/Cart/CartItem";
+import EmptyCart from "../../../components/global/Cart/EmptyCart";
 
 const CartPage = () => {
   const cartItem = useSelector((state) => state.cart.products);
