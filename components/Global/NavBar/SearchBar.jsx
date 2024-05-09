@@ -37,12 +37,6 @@ const SearchBar = () => {
       <div className="flex items-center justify-end w-36">
         <div className="flex items-center gap-3 text-xl">
           <Link
-            href="/favorite"
-            className=" hover:text-[#ff0000] cursor-pointer"
-          >
-            {/* <FaRegHeart /> */}
-          </Link>
-          <Link
             href="/cart"
             className=" hover:text-[#ff0000] cursor-pointer flex items-center justify-center"
           >

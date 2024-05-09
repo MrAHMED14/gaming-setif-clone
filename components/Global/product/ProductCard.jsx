@@ -8,7 +8,7 @@ const ProductCard = ({ item }) => {
         href={`/product-details/${item.id}`}
         className="sm:hover:scale-110 sm:duration-500"
       >
-        <div className="flex-shrink-0 m-2 relative overflow-hidden bg-slate-50  rounded-lg max-w-xs shadow-lg border">
+        <div className="flex-shrink-0 m-2 relative overflow-hidden bg-slate-50 rounded-lg max-w-xs shadow-lg border">
           <div className="relative pt-5 px-3 flex items-center justify-center">
             {item.attributes.images.data[0].attributes.url ? (
               <Image
@@ -16,11 +16,11 @@ const ProductCard = ({ item }) => {
                 width={192}
                 height={192}
                 alt="product"
-                className="relative w-48  object-cover object-center rounded "
+                className="relative w-48 object-cover object-center rounded "
               />
             ) : (
               <>
-                <div className="w-48  bg-gray-300 rounded-lg animate-pulse"></div>
+                <div className="w-52 h-48 bg-gray-300/80 rounded-lg animate-pulse"></div>
               </>
             )}
           </div>

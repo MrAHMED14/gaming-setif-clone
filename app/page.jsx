@@ -1,6 +1,10 @@
-import ProductCard from "@/components/Global/product/ProductCard";
+import Slider from "@/components/global/Slider";
+import ProductCard from "@/components/global/product/ProductCard";
+import ProductSkeleton from "@/components/global/product/ProductSkeleton";
 import { getPopularProducts, getProduct2 } from "@/lib/api/ServerAction";
 import Link from "next/link";
+
+export const dynamic = "force-dynamic";
 
 export default async function Home() {
   const res = await getPopularProducts();
@@ -9,10 +13,11 @@ export default async function Home() {
   return (
     <>
       <div className="container mx-auto">
-        <div className="bg-slate-200 w-full h-56 md:h-96 rounded-md flex items-center justify-center">
-          <h1 className="text-slate-600 font-bold text-4xl md:text-6xl">
+        <div className="bg-slate-200 w-full aspect-[21/9] min-h-36 md:h-96 rounded-md overflow-hidden flex items-center justify-center">
+          {/* <h1 className="text-slate-600 font-bold text-4xl md:text-6xl">
             Slider
-          </h1>
+          </h1> */}
+          <Slider />
         </div>
 
         <div className="mt-6">
@@ -30,10 +35,22 @@ export default async function Home() {
             </Link>
           </div>
 
-          <div className="grid gap-0 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-2">
-            {res?.map((item) => (
-              <ProductCard key={item.id} item={item} />
-            ))}
+          <div className="grid gap-0 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-2 place-items-center">
+            {res ? (
+              <>
+                {res?.map((item) => (
+                  <ProductCard key={item.id} item={item} />
+                ))}
+              </>
+            ) : (
+              <>
+                {Array(4)
+                  .fill()
+                  .map((_, index) => (
+                    <ProductSkeleton key={index} />
+                  ))}
+              </>
+            )}
           </div>
         </div>
 
@@ -53,9 +70,21 @@ export default async function Home() {
           </div>
 
           <div className="grid gap-0 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 lg:gap-2">
-            {res2?.map((item) => (
-              <ProductCard key={item.id} item={item} />
-            ))}
+            {res2 ? (
+              <>
+                {res2?.map((item) => (
+                  <ProductCard key={item.id} item={item} />
+                ))}
+              </>
+            ) : (
+              <>
+                {Array(4)
+                  .fill()
+                  .map((_, index) => (
+                    <ProductSkeleton key={index} />
+                  ))}
+              </>
+            )}
           </div>
         </div>
       </div>

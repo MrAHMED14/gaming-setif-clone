@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import CartItem from "@/components/Global/Cart/CartItem";
+import CartItem from "@/components/global/Cart/CartItem";
 import { restCart } from "@/redux/slices/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
-import EmptyCart from "@/components/Global/Cart/EmptyCart";
+import EmptyCart from "@/components/global/Cart/EmptyCart";
 
 const CartPage = () => {
   const cartItem = useSelector((state) => state.cart.products);

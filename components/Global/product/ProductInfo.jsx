@@ -12,7 +12,6 @@ const ProductInfo = ({ data }) => {
     const price = data?.attributes?.price;
     const img = data?.attributes?.images?.data[0]?.attributes?.url;
     const qty = 1;
-    console.log({ id, title, price, img, qty });
     dispatch(addToCart({ id, title, price, img, qty }));
     toast.success("Your product added successfully.", {
       position: "top-right",
