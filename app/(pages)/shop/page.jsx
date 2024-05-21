@@ -1,3 +1,5 @@
+import Filters from "@/components/Global/Filters";
+import PaginationProduct from "@/components/Global/PaginationProduct";
 import ProductCard from "@/components/Global/product/ProductCard";
 import ProductSkeleton from "@/components/Global/product/ProductSkeleton";
 import { getLatestProduct } from "@/lib/api/ServerAction";
@@ -9,40 +11,37 @@ const Shop = async () => {
 
   return (
     <>
-      <div className="container mx-auto mb-9">
+      <div className="sm:container sm:mx-auto mx-4 mb-9">
         <div className="mt-6">
-          <h1 className="font-bold text-4xl text-start my-3 w-fit">
+          <h1 className="font-bold text-[26px] md:text-4xl text-start my-3 w-fit">
             Our Products
           </h1>
         </div>
         <p className="border-t-4 border-t-[#ff0000] w-28 mb-4"></p>
       </div>
-      <div className="container mx-auto flex gap-2 justify-center">
-        <div className="w-[17%] hidden lg:block">
-          <div className="bg-slate-200/30 border sticky top-20 w-full flex-col p-4 rounded-md">
-            <h1 className="font-bold text-lg">Filters</h1>
-            <p className="py-3 bg-white px-2 rounded mt-3">Categories</p>
-            <p className="py-3 bg-white px-2 rounded mt-3">Sub Categories</p>
-            <p className="py-3 bg-white px-2 rounded mt-3">Price</p>
-            <p className="py-3 bg-white px-2 rounded mt-3">Brand</p>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-2">
-          {res ? (
-            <>
-              {res?.map((item) => (
-                <ProductCard key={item.id} item={item} />
-              ))}
-            </>
-          ) : (
-            <>
-              {Array(16)
-                .fill()
-                .map((_, index) => (
-                  <ProductSkeleton key={index} />
+      <div className="sm:container sm:mx-auto mx-4 flex gap-2 justify-center">
+        {/* <Filters /> */}
+        <div className="w-full flex flex-col gap-y-6">
+          <div className="w-full grid gap-0 grid-cols-1 sm:grid-cols-2 min-[960px]:grid-cols-3 min-[1250px]:grid-cols-4 min-[1250px]:gap-2 place-items-center">
+            {res ? (
+              <>
+                {res?.map((item) => (
+                  <ProductCard key={item.id} item={item} isAA={true} />
                 ))}
-            </>
-          )}
+              </>
+            ) : (
+              <>
+                {Array(8)
+                  .fill()
+                  .map((_, index) => (
+                    <ProductSkeleton key={index} />
+                  ))}
+              </>
+            )}
+          </div>
+          <div className="flex justify-center items-center w-full">
+            <PaginationProduct />
+          </div>
         </div>
       </div>
     </>

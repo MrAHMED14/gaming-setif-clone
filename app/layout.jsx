@@ -6,6 +6,7 @@ import ContactBar from "@/components/Global/NavBar/ContactBar";
 import SearchBar from "@/components/Global/NavBar/SearchBar";
 import NavBar from "@/components/Global/NavBar/NavBar";
 import Footer from "@/components/Global/Footer";
+import Up from "@/components/Global/Up";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         suppressHydrationWarning={true}
-        className={inter.className + " min-h-screen flex flex-col"}
+        className={inter.className + " {dark} min-h-screen flex flex-col"}
       >
         <Providers>
           <Toaster
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
           <main className="mb-20">{children}</main>
           <Footer />
         </Providers>
+        <Up />
       </body>
     </html>
   );

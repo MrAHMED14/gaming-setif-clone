@@ -12,13 +12,8 @@ export default async function Home() {
 
   return (
     <>
-      <div className="container mx-auto">
-        <div className="bg-slate-200 w-full aspect-[21/9] min-h-36 md:h-96 rounded-md overflow-hidden flex items-center justify-center">
-          {/* <h1 className="text-slate-600 font-bold text-4xl md:text-6xl">
-            Slider
-          </h1> */}
-          <Slider />
-        </div>
+      <div className="sm:container sm:mx-auto mx-4">
+        <Slider />
 
         <div className="mt-6">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center">
@@ -35,7 +30,7 @@ export default async function Home() {
             </Link>
           </div>
 
-          <div className="grid gap-0 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-2 place-items-center">
+          <div className="grid gap-0 grid-cols-1 sm:grid-cols-2 min-[960px]:grid-cols-3 min-[1250px]:grid-cols-4 min-[1250px]:gap-2 place-items-center">
             {res ? (
               <>
                 {res?.map((item) => (
@@ -69,7 +64,7 @@ export default async function Home() {
             </Link>
           </div>
 
-          <div className="grid gap-0 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 lg:gap-2">
+          <div className="grid gap-0 grid-cols-1 sm:grid-cols-2 min-[960px]:grid-cols-3 min-[1250px]:grid-cols-4 min-[1250px]:gap-2 place-items-center">
             {res2 ? (
               <>
                 {res2?.map((item) => (

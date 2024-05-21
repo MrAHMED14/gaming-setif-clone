@@ -6,17 +6,17 @@ const ProductCard = ({ item }) => {
     <>
       <Link
         href={`/product-details/${item.id}`}
-        className="sm:hover:scale-110 sm:duration-500"
+        className="sm:hover:scale-105 sm:duration-500"
       >
-        <div className="flex-shrink-0 m-2 relative overflow-hidden bg-slate-50 rounded-lg max-w-xs shadow-lg border">
+        <div className="m-2 relative bg-slate-50 rounded-lg w-72 shadow-lg border">
           <div className="relative pt-5 px-3 flex items-center justify-center">
-            {item.attributes.images.data[0].attributes.url ? (
+            {item?.attributes?.images?.data[0]?.attributes?.url ? (
               <Image
                 src={item?.attributes?.images?.data[0]?.attributes?.url}
                 width={192}
                 height={192}
                 alt="product"
-                className="relative w-48 object-cover object-center rounded "
+                className="relative w-48 object-cover object-center rounded aspect-square"
               />
             ) : (
               <>
@@ -29,18 +29,40 @@ const ProductCard = ({ item }) => {
               <p className="font-medium text-xl line-clamp-2 h-14">
                 {item.attributes.title}
               </p>
-              <span className="block text-slate-950 text-xl font-bold py-2 leading-none items-center mb-1">
-                {item.attributes.price}.00 DA
-              </span>
+
+              <div className="">
+                <span className="block text-slate-400 text-sm font-bold line-through pt-2 leading-none items-center ">
+                  12000.00 DA
+                </span>
+                <span className="block text-slate-950 text-xl font-bold pb-2 leading-none items-center mb-1">
+                  {item.attributes.price}.00 DA
+                </span>
+              </div>
             </div>
           </div>
-          <Badge
-            className={`bg-[#ff0000] font-semibold absolute z-10 top-4 left-4 ${
-              item?.attributes?.isOutStock ? "" : "hidden"
-            }`}
-          >
-            OUT OF STOCK
-          </Badge>
+          <div className="absolute z-10 top-4 left-4 flex gap-2 flex-wrap">
+            <Badge
+              className={`bg-[#ff0000] hover:bg-red-500 font-semibold  ${
+                item?.attributes?.isOutStock ? "" : "hidden"
+              }`}
+            >
+              OUT OF STOCK
+            </Badge>
+            <Badge
+              className={`bg-[#249446] hover:bg-green-500 font-semibold  ${
+                item?.attributes?.isOutStock ? "" : "hidden"
+              }`}
+            >
+              NEW
+            </Badge>
+            <Badge
+              className={`bg-[#ffe81a] hover:bg-yellow-400 text-black font-semibold  ${
+                item?.attributes?.isOutStock ? "" : "hidden"
+              }`}
+            >
+              27%
+            </Badge>
+          </div>
         </div>
       </Link>
     </>
