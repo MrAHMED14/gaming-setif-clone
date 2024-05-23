@@ -10,10 +10,16 @@ export default async function Home() {
   const res = await getPopularProducts();
   const res2 = await getProduct2();
 
+  const SliderimgURL = [
+    { link: "#", url: "/500.jpg" },
+    { link: "#", url: "/900.jpg" },
+    { link: "#", url: "/200-1.jpg" },
+  ];
+
   return (
     <>
       <div className="sm:container sm:mx-auto mx-4">
-        <Slider />
+        <Slider imgURL={SliderimgURL} />
 
         <div className="mt-6">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center">

@@ -1,68 +1,58 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
+import { useState } from "react";
 
-const EmblaCarousel = () => {
-  const options = { loop: true };
-  const slides = Array.from(Array(5).keys());
-  const [isPlaying, setIsPlaying] = useState(true);
-  const autoplay = useRef(Autoplay({ delay: 1000, stopOnMouseEnter: true }));
+const Slider10 = () => {
+  const imgURL = ["/200.jpg", "/300.png", "/400.jpg", "/500.jpg"];
+  const [imgIndx, setImgIndx] = useState(0);
 
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [autoplay.current]);
-
-  useEffect(() => {
-    if (emblaApi) {
-      const handleMouseEnter = () => {
-        autoplay.current.stop();
-      };
-
-      const handleMouseLeave = () => {
-        if (isPlaying) {
-          autoplay.current.play();
-        }
-      };
-
-      const container = emblaApi.rootNode();
-      container.addEventListener("mouseenter", handleMouseEnter);
-      container.addEventListener("mouseleave", handleMouseLeave);
-
-      return () => {
-        container.removeEventListener("mouseenter", handleMouseEnter);
-        container.removeEventListener("mouseleave", handleMouseLeave);
-      };
-    }
-  }, [emblaApi, isPlaying]);
-
-  useEffect(() => {
-    if (emblaApi) {
-      if (isPlaying) {
-        autoplay.current.play();
-      } else {
-        autoplay.current.stop();
-      }
-    }
-  }, [emblaApi, isPlaying]);
+  const showNextIMG = () => {
+    setImgIndx((i) => {
+      if (i === imgURL.length - 1) return 0;
+      return i + 1;
+    });
+  };
+  const showPrevIMG = () => {
+    setImgIndx((i) => {
+      if (i === 0) return imgURL.length - 1;
+      return i - 1;
+    });
+  };
 
   return (
-    <section className="w-full bg-black text-white rounded-md aspect-[21/9] min-h-36 md:h-96">
-      <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex justify-center items-center">
-          {slides.map((index) => (
-            <Image
-              key={index}
-              src={"/500.jpg"}
-              width={3000}
-              height={2500}
-              alt=""
-              className="w-full h-full object-cover"
-            />
-          ))}
+    <>
+      <div className="w-full aspect-[10/4] lg:aspect-[10/3] rounded-md overflow-hidden mt-3">
+        <div className="w-full h-full">
+          <div className="w-full h-full flex overflow-hidden">
+            {imgURL?.map((img) => (
+              <Image
+                key={img}
+                src={img}
+                alt="slider"
+                width={2500}
+                height={2500}
+                className="block w-full h-full pointer-events-none object-cover flex-shrink-0 flex-grow-0 animate-slide"
+                style={{ translate: `${-100 * imgIndx}%` }}
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </section>
+      <div className="flex gap-4 text-sm mt-5">
+        <button
+          onClick={showPrevIMG}
+          className="bg-gray-700 rounded p-2 text-white"
+        >
+          PREV
+        </button>
+        <button
+          onClick={showNextIMG}
+          className="bg-gray-700 rounded p-2 text-white"
+        >
+          NEXT
+        </button>
+      </div>
+    </>
   );
 };
-
-export default EmblaCarousel;
+export default Slider10;

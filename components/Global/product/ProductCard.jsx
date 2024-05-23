@@ -16,6 +16,7 @@ const ProductCard = ({ item }) => {
                 width={192}
                 height={192}
                 alt="product"
+                loading={"lazy"} // check this out
                 className="relative w-48 object-cover object-center rounded aspect-square"
               />
             ) : (
