@@ -75,8 +75,8 @@
   }
 }
 
-.animate-slide {
-  transition: translate 300ms ease-in-out;
+.active {
+  @apply hover:text-red-700 text-[#ff0000];
 }
 
 .embla {

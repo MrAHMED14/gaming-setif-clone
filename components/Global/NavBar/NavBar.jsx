@@ -11,6 +11,7 @@ import {
 
 import { FaSearch } from "react-icons/fa";
 import CategoriesDropdownMenu from "../CategoriesDropdownMenu";
+import NavLink from "./NavLink";
 
 const NavBar = () => {
   return (
@@ -26,20 +27,7 @@ const NavBar = () => {
       </div>
 
       <div className="hidden lg:flex items-center">
-        <ul className="flex gap-7">
-          <Link className="hover:text-[#ff0000]" href="/">
-            Home
-          </Link>
-          <Link className="hover:text-[#ff0000]" href="/shop">
-            Shop
-          </Link>
-          <Link className="hover:text-[#ff0000]" href="/mypc">
-            My Computer
-          </Link>
-          <Link className="hover:text-[#ff0000]" href="/contact">
-            Contact
-          </Link>
-        </ul>
+        <NavLink />
       </div>
 
       <div className="flex items-center justify-end w-56">
